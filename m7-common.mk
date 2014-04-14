@@ -114,6 +114,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.msm8960
+
 # NFC
 PRODUCT_PACKAGES += \
     nfc.msm8960 \
@@ -167,6 +171,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.cam.hw.version=m7 \
     ro.cwm.forbid_format="/firmware/mdm,/firmware/q6" \
     ro.cwm.forbid_mount="/firmware/mdm,/firmware/q6" \
+    ro.input.noresample=1 \
     ro.opengles.version=196608 \
     ro.telephony.call_ring.multiple=false \
     ro.telephony.call_ring.delay=3000 \
